@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Seller from '../component/seller/Seller'
-import {ScrollContainer} from 'react-router-scroll'
 
 const SellerContainer = ({seller}) => {
     return (

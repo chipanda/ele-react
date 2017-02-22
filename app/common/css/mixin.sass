@@ -1,0 +1,36 @@
+@mixin border-1px($color)
+  position relative
+  &:after
+    display: block
+    position: absolute
+    //z-index: 100
+    width: 100%
+    left: 0
+    bottom: 0
+    border-top: 1px solid $color
+    content: ''
+@mixin border-none()
+  border-width: 0px
+
+@mixin bg-image($url)
+  background-repeat: no-repeat
+  background-image: url($url + "@2x.png")
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    background-image: url($url + "@3x.png")
+
+@mixin bg-support($type)
+  &.decrease
+    @include bg-image("decrease"+$type)
+  &.discount
+    @include bg-image("discount"+$type)
+  &.guarantee
+    @include bg-image("guarantee"+$type)
+  &.invoice
+    @include bg-image("invoice"+$type)
+  &.special
+    @include bg-image("special"+$type)
+
+@mixin bg-size($width,$height)
+  width: $width
+  height: $height
+  background-size: $width $height

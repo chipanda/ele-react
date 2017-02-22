@@ -1,0 +1,110 @@
+@import '../../common/css/mixin'
+.foodDetail
+  position: fixed
+  left: 0
+  top: 0
+  bottom: 48px
+  width: 100%
+  background-color: #fff
+  will-change: transform
+  transition: transform 0.5s
+  &.food-detail-enter
+    transform: translateX(100%)
+  &.food-detail-enter-active
+    transform: translateX(0)
+  &.food-detail-leave
+    transform: translateX(0)
+  &.food-detail-leave-active
+    transform: translateX(100%)
+  .img-header
+    position: relative
+    width: 100%
+    height: 0
+    padding-top: 100%
+    img
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+    .back-hook
+      position: absolute
+      left: 10px
+      top: 10px
+      padding: 6px
+      font-size: 20px
+      color: #fff
+
+  .food-content
+    position: relative
+    padding: 18px
+    .title
+      margin-bottom: 8px
+      line-height: 14px
+      height: 14px
+      font-size: 14px
+      font-weight: 700
+      color: rgb(7, 17, 27)
+    .extra
+      lint-height: 10px
+      font-size: 10px
+      color: rgb(147, 153, 159)
+      .sell
+        margin-right: 12px
+    .price
+      margin-top: 18px
+      .new, .old
+        vertical-align: top
+        line-height: 14px
+        font-weigth: 700
+      .new
+        font-size: 14px
+        color: rgb(240, 20, 20)
+      .old
+        font-size: 10px
+        color: rgb(147, 153, 159)
+        text-decoration: line-through
+    .addcart
+      position: absolute
+      z-index: 10
+      right: 18px
+      bottom: 18px
+      padding: 0 12px
+      line-height: 24px
+      font-size: 10px
+      color: #fff
+      background-color: rgb(0, 160, 220)
+      border-radius: 12px
+      &.addcart-enter, &.addcart-leave-active
+        opacity: 0
+      &.addcart-enter-active, &.addcart-leave-active
+        transition: opacity 0.5s
+    .cartcontrol-wrapper
+      position: absolute
+      right: 14px
+      bottom: 14px
+
+  .food-info
+    padding: 18px
+    .title
+      font-size: 14px
+      color: rgb(7, 17, 27)
+      margin-bottom: 6px
+    .info
+      line-height: 24px
+      font-size: 12px
+      color: rgb(77, 85, 93)
+
+  .food-rating
+    .title
+      font-size: 14px
+      color: rgb(7, 17, 27)
+      padding-left: 18px
+      padding-top: 18px
+  .rating-content
+    padding: 0 18px
+  .no-rating
+    padding: 16px 18px
+    text-align: center
+    font-size: 12px
+    color: rgb(147, 153, 159)

@@ -1,0 +1,29 @@
+@import '../../common/css/mixin'
+.menu-wrapper
+  flex: none
+  width: 80px
+  background-color: #f3f5f7
+  .menu-item
+    display: table
+    height: 54px
+    width: 56px
+    line-height: 14px
+    padding: 0 12px
+    &.current
+      position: relative
+      z-index: 10
+      margin-top: -1px
+      background-color: #fff
+      font-weight: 700
+      .text
+        @include border-none()
+    .text
+      display: table-cell
+      position: relative
+      vertical-align: middle
+      width: 56px
+      font-size: 12px
+      line-height: 14px
+      @include border-1px(rgba(7, 17, 27, 0.1))
+      .support-icon
+        vertical-align: middle

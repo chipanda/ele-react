@@ -1,0 +1,21 @@
+.flyball
+  position: fixed
+  top: 0
+  left: 0
+  transition: transform .5s linear
+  z-index: 1000
+
+.flyball .inner
+  position: absolute
+  top: 0
+  left: 0
+  background-color: #3190e8
+  -webkit-border-radius: 50%
+  border-radius: 50%
+
+.flyball, .flyball .inner
+  will-change: transform
+  transform: translate3d(0, 0, 0)
+
+.flyball .inner
+  transition: transform .5s cubic-bezier(.3,-0.2,1,0)

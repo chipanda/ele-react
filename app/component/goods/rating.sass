@@ -1,0 +1,28 @@
+@import '../../common/css/mixin'
+.detail-rating-item
+  padding: 16px 0
+  @include border-1px(rgba(7, 17, 27, 0.1))
+  .head
+    line-height: 12px
+    font-size: 10px
+    color: rgb(147, 153, 159)
+    overflow: hidden
+    margin-bottom: 6px
+    .time
+      float: left
+    .username, .avatar
+      float: right
+    .username
+      margin-right: 6px
+  .content
+    line-height: 16px
+    font-size: 12px
+    color: rgb(7, 17, 27)
+    .thumb
+      margin-right: 4px
+      line-height: 24px
+      font-size: 12px
+      &.icon-thumb_up
+        color: rgb(0,160,220)
+      &.icon-thumb_down
+        color: rgb(147,153,159)

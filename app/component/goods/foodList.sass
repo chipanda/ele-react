@@ -1,0 +1,54 @@
+@import '../../common/css/mixin'
+.food-wrapper
+  flex: auto
+  .category
+    .category-name
+      padding-left: 14px
+      height: 26px
+      line-height: 26px
+      font-size: 12px
+      color: rgb(147, 153, 159)
+      background-color: #f3f5f7
+      border-left: 1px solid #d9dde1
+    .food
+      display: flex
+      position: relative
+      margin: 18px 18px 0 18px
+      padding-bottom: 18px
+      @include border-1px(rgba(7, 17, 27, 0.1))
+      &:last-child
+        border-bottom: 0
+      .avatar
+        flex: 0 0 72px
+        margin-right: 10px
+      .content
+        flex auto
+        padding-top: 2px
+        .name
+          display: block
+          margin-bottom: 8px
+          line-height: 14px
+          font-size: 14px
+          color: rgb(7, 17, 27)
+        .desc, .extra
+          margin-bottom: 8px
+          line-height: 10px
+          font-size: 10px
+          color: rgb(147, 153, 159)
+          .rating
+            margin-left: 12px
+        .price
+          line-height: 24px
+          font-weight: 700
+          .now
+            font-size: 14px
+            color: rgb(140, 20, 20)
+          .old
+            margin-left: 8px
+            font-size: 10px
+            text-decoration: line-through
+            color: rgb(147, 153, 159)
+        .cartcontrol
+          position: absolute
+          right: 0px
+          bottom: 10px

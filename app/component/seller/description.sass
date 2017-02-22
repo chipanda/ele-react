@@ -1,0 +1,58 @@
+@import '../../common/css/mixin'
+.overview
+  padding: 18px
+  width: 100%
+  box-sizing: border-box
+  .head
+    position: relative
+    padding-bottom: 18px
+    @include border-1px(rgba(7, 17, 27, 0.1))
+    .desc
+      margin-top: 8px
+      .star-wrapper, .rating-count, .sell-count
+        display: inline-block
+        vertical-align: top
+        height: 18px
+        line-height: 18px
+      .star-wrapper
+        margin-right: 8px
+      .rating-count, .sell-count
+        font-size: 10px
+        color: rgb(77, 85, 93)
+      .rating-count
+        margin-right: 12px
+    .favorite-wrapper
+      position: absolute
+      right: 0
+      top: 0
+      width: 40px
+      text-align: center
+      .icon-favorite
+        display: block
+        font-size: 24px
+        line-height: 24px
+        color: rgb(147, 153, 159)
+        &.favorite
+          color: rgb(220, 20, 20)
+      .collect
+        font-size: 10px
+        color: rgb(77, 85, 93)
+  .remark
+    display: flex
+    .remark-item
+      display: inline-block
+      flex: 1
+      margin-top: 18px
+      text-align: center
+      border-right: 1px solid rgba(7, 17, 27, 0.1)
+      &:last-child
+      @include border-none()
+      h3
+        margin-bottom: 4px
+        line-height: 10px
+        font-size: 10px
+        color: rgb(147, 153, 159)
+      span
+        line-height: 24px
+        font-size: 20px
+        color: rgb(7, 17, 27)

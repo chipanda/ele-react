@@ -1,5 +1,6 @@
 import {RECEIVE_SELLER, RECEIVE_GOODS, RECEIVE_RATINGS, ERROR_REQUEST} from '../constants/ActionTypes'
 import {SELLER, GOODS, RATINGS} from '../constants/PostTypes'
+import 'fetch-polyfill'
 export function fetchPosts(postTitle, id) {
     return (dispatch, getState) => {
         //dispatch(requestPosts(postTitle));

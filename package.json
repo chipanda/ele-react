@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "better-scroll": "^0.1.11",
+    "fetch-polyfill": "^0.8.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.2",

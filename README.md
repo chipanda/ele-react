@@ -12,6 +12,8 @@
 
 ## 运行
 
+npm install
+
 ### npm start
 
 启动server并访问页面

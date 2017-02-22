@@ -1,5 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 module.exports = {
     entry: {
         app: ['webpack-hot-middleware/client?reload=true', __dirname + "/app/main.js"]
@@ -20,7 +21,7 @@ module.exports = {
         },{
             test: /\.sass$|\.scss$/,
             exclude: /node_modules/,
-            loader: 'style!css!sass?sourceMap'
+            loader: 'style!css!postcss!sass?sourceMap'
         },{
             test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
             loader: 'url?limit=10000&name=fonts/+[name].[hash:7].[ext]',
@@ -38,11 +39,10 @@ module.exports = {
     ],
     resolve:{
         extensions:['', '.js', '.jsx']
-    }
-    // devServer:{
-    //     contentBase:"./public",
-    //     colors: true,
-    //     historyApiFallback: true,
-    //     inline: true
-    // }
+    },
+    postcss: [
+        autoprefixer({
+            browsers: ['last 2 versions']
+        })
+    ]
 }

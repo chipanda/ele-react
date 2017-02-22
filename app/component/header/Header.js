@@ -43,21 +43,24 @@ const Header = ({seller, promptShow, toggleShow}) => {
             </div>
             <ToggleShow ifShow={promptShow} transitionName="prompt-detail">
                 <div className="prompt-detail">
-                    <div className="content"><h1 className="name">{seller.name}</h1>
-                        <div className="star-wrapper">
-                            <Star score={seller.score} size={48}/>
+                    <div className="detail-wrapper">
+                        <div className="detail">
+                            <h1 className="name">{seller.name}</h1>
+                            <div className="star-wrapper">
+                                <Star score={seller.score} size={48}/>
+                            </div>
+                            <MiddleSection title="优惠信息"/>
+                            <ul className="support">
+                                {seller.supports.map(function (support) {
+                                    return (<li className="support-item" key={support.description}>
+                                        <SupportIcon className="icon" supportType={support.type} type="2"/>
+                                        <span className="text">{support.description}</span>
+                                    </li>)
+                                })}
+                            </ul>
+                            <MiddleSection title="商家信息"/>
+                            <div className="bulletin">{seller.bulletin}</div>
                         </div>
-                        <MiddleSection title="优惠信息"/>
-                        <ul className="support">
-                            {seller.supports.map(function (support) {
-                                return (<li className="support-item" key={support.description}>
-                                    <SupportIcon className="icon" supportType={support.type} type="2"/>
-                                    <span className="text">{support.description}</span>
-                                </li>)
-                            })}
-                        </ul>
-                        <MiddleSection title="商家信息"/>
-                        <div className="bulletin">{seller.bulletin}</div>
                     </div>
                     <div className="footer" onClick={toggleShow}>
                         <span className="icon-close"></span>

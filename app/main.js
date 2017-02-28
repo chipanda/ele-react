@@ -10,20 +10,7 @@ import configureStore from './store'
 import './common/css/index.sass'
 
 const store = configureStore();
-const manageScroll = (prevRouterProps, { routes }) => {
-    return [0,100]
-    if (routes.some(route => route.ignoreScrollBehavior)) {
-        return false;
-    }
 
-    if (routes.some(route => route.scrollToTop)) {
-        console.log('...')
-        return [0, 100];
-    }
-    console.log(prevRouterProps)
-    console.log(routes)
-    return true;
-}
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory}>
